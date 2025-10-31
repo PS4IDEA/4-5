@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PS4IDEA PAGES</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #001133 0%, #002b80 35%, #f0f0f0 65%, #ffffff 100%);
+      background-attachment: fixed;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* تأثيرات ضوء خفيفة */
+    body::before, body::after {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      filter: blur(200px);
+      opacity: 0.6;
+      z-index: 0;
+    }
+
+    body::before {
+      background: #0040ff;
+      top: 20%;
+      left: -10%;
+    }
+
+    body::after {
+      background: #00c6ff;
+      bottom: 20%;
+      right: -10%;
+    }
+
+    h1 {
+      font-size: 3em;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      letter-spacing: 4px;
+      text-shadow:
+        0 0 20px #00aaff,
+        0 0 40px #00aaff,
+        0 0 60px #00aaff;
+      z-index: 1;
+      margin-bottom: 70px;
+    }
+
+    .controllers {
+      display: flex;
+      gap: 60px;
+      z-index: 1;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .controller {
+      width: 220px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .controller:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px #00c6ff;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 2em;
+        margin-bottom: 40px;
+      }
+      .controllers {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .controller {
+        width: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>PS4IDEA</h1>
+
+  <div class="controllers">
+    <!-- يد PS4 -->
+    <a href="https://ps4idea.github.io/900/" target="_blank">
+      <img src="ps4.png" alt="PS4 Controller" class="controller">
+    </a>
+
+    <!-- يد PS5 -->
+    <a href="https://ps4idea.github.io/UMTX2" target="_blank">
+      <img src="ps5.png" alt="PS5 Controller" class="controller">
+    </a>
+  </div>
+
+</body>
+</html>
