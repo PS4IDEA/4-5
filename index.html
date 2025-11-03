@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PS4IDEA PAGES</title>
 
-  <!-- ✅ استدعاء أيقونات Font Awesome -->
+  <!-- ✅ أيقونات Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
   <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
+      min-height: 100vh;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
@@ -20,12 +25,14 @@
       align-items: center;
       background: linear-gradient(135deg, #000000 0%, #1a1a1a 40%, #2b2000 60%, #ffe066 100%);
       background-attachment: fixed;
-      overflow: hidden;
+      background-size: cover;
+      overflow-x: hidden;
       position: relative;
+      color: #fff;
     }
 
     h1 {
-      font-size: 3.5em;
+      font-size: 3.2em;
       font-weight: bold;
       text-align: center;
       letter-spacing: 5px;
@@ -33,9 +40,9 @@
       background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow:
-        0 0 15px rgba(255, 215, 0, 0.8),
-        0 0 40px rgba(255, 215, 0, 0.4);
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4);
       margin-top: 40px;
       animation: goldshine 5s linear infinite;
     }
@@ -47,24 +54,27 @@
 
     .controllers {
       display: flex;
-      gap: 150px;
+      gap: 100px;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 80px;
+      margin-top: 70px;
     }
 
     .controller {
-      width: 260px;
+      width: 240px;
+      max-width: 80vw;
       transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
+      -webkit-filter: drop-shadow(0 0 15px #000);
       filter: drop-shadow(0 0 15px #000);
       border-radius: 15px;
     }
 
     .controller:hover {
-      transform: scale(1.15);
+      transform: scale(1.12);
+      -webkit-filter: drop-shadow(0 0 40px #ffd700);
       filter: drop-shadow(0 0 40px #ffd700);
-      box-shadow: 0 0 50px rgba(255, 215, 0, 0.6);
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
     }
 
     footer {
@@ -73,7 +83,7 @@
       color: #fff;
       padding: 25px 0 35px;
       font-size: 1.1em;
-      background: rgba(30, 30, 30, 0.9);
+      background: rgba(30, 30, 30, 0.95);
       border-top: 2px solid rgba(255, 215, 0, 0.3);
     }
 
@@ -89,17 +99,18 @@
       justify-content: center;
       gap: 35px;
       margin-top: 10px;
+      flex-wrap: wrap;
     }
 
     .social-links a {
-      font-size: 2.4em;
+      font-size: 2.3em;
       transition: transform 0.3s, opacity 0.3s;
       text-decoration: none;
     }
 
     .social-links a:hover {
-      transform: scale(1.2);
-      opacity: 0.85;
+      transform: scale(1.15);
+      opacity: 0.9;
     }
 
     /* 🎨 ألوان المنصات */
@@ -107,11 +118,12 @@
     .telegram { color: #0088cc; }
     .x { color: #000; background: #fff; border-radius: 5px; padding: 2px 6px; }
 
+    /* 📱 تحسين التوافق مع الشاشات الصغيرة */
     @media (max-width: 700px) {
-      h1 { font-size: 2.3em; }
-      .controllers { flex-direction: column; gap: 50px; margin-top: 60px; }
-      .controller { width: 200px; }
-      .social-links a { font-size: 2em; }
+      h1 { font-size: 2.2em; margin-top: 25px; }
+      .controllers { gap: 40px; margin-top: 50px; }
+      .controller { width: 180px; }
+      .social-links a { font-size: 1.9em; }
     }
   </style>
 </head>
@@ -120,14 +132,12 @@
   <h1>PS4IDEA PAGES</h1>
 
   <div class="controllers">
-    <!-- زر PS4 -->
-    <a href="https://ps4idea.github.io/900/" target="_blank" class="controller-link">
-      <img src="ps4.png" alt="PS4 Controller" class="controller">
+    <a href="https://ps4idea.github.io/900/" target="_blank" aria-label="PS4 Page">
+      <img src="ps4.png" alt="PS4 Controller Image" class="controller">
     </a>
 
-    <!-- زر PS5 -->
-    <a href="https://ps4idea.github.io/UMTX2" target="_blank" class="controller-link">
-      <img src="ps5.png" alt="PS5 Controller" class="controller">
+    <a href="https://ps4idea.github.io/UMTX2" target="_blank" aria-label="PS5 Page">
+      <img src="ps5.png" alt="PS5 Controller Image" class="controller">
     </a>
   </div>
 
