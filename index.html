@@ -6,124 +6,83 @@
   <title>PS4IDEA PAGES</title>
 
   <!-- ✅ أيقونات Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    * {
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
-    }
-
     body {
       margin: 0;
       padding: 0;
-      min-height: 100vh;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(135deg, #000000 0%, #1a1a1a 40%, #2b2000 60%, #ffe066 100%);
-      background-attachment: fixed;
-      background-size: cover;
-      overflow-x: hidden;
-      position: relative;
-      color: #fff;
+      min-height: 100vh;
     }
 
     h1 {
-      font-size: 3.2em;
+      color: #ffd700;
+      font-size: 2.4em;
       font-weight: bold;
-      text-align: center;
-      letter-spacing: 5px;
-      background: linear-gradient(90deg, #ffdf00, #ffd700, #fff8c6, #ffcc00);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
-      text-shadow: 0 0 15px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4);
-      margin-top: 40px;
-      animation: goldshine 5s linear infinite;
-    }
-
-    @keyframes goldshine {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 200% 50%; }
+      margin: 30px 0 10px 0;
+      text-shadow: 0 0 8px #caa400;
     }
 
     .controllers {
       display: flex;
-      gap: 100px;
-      flex-wrap: wrap;
       justify-content: center;
-      margin-top: 70px;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 60px;
+      margin-top: 40px;
     }
 
     .controller {
-      width: 240px;
-      max-width: 80vw;
-      transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      -webkit-filter: drop-shadow(0 0 15px #000);
-      filter: drop-shadow(0 0 15px #000);
-      border-radius: 15px;
+      width: 220px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+      transition: transform 0.2s ease;
     }
 
     .controller:hover {
-      transform: scale(1.12);
-      -webkit-filter: drop-shadow(0 0 40px #ffd700);
-      filter: drop-shadow(0 0 40px #ffd700);
-      box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+      transform: scale(1.08);
     }
 
     footer {
-      width: 100%;
-      text-align: center;
-      color: #fff;
-      padding: 25px 0 35px;
-      font-size: 1.1em;
-      background: rgba(30, 30, 30, 0.95);
-      border-top: 2px solid rgba(255, 215, 0, 0.3);
+      background: #222;
+      border-top: 1px solid #444;
+      padding: 20px 0;
+      margin-top: 50px;
     }
 
     footer p {
-      margin: 5px 0 10px 0;
-      font-weight: bold;
-      letter-spacing: 1px;
       color: #ffd700;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
 
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 35px;
-      margin-top: 10px;
-      flex-wrap: wrap;
+      gap: 30px;
     }
 
     .social-links a {
-      font-size: 2.3em;
-      transition: transform 0.3s, opacity 0.3s;
+      color: #fff;
+      font-size: 2em;
       text-decoration: none;
     }
 
-    .social-links a:hover {
-      transform: scale(1.15);
-      opacity: 0.9;
-    }
+    .social-links a.youtube { color: #FF0000; }
+    .social-links a.telegram { color: #0088cc; }
+    .social-links a.x { color: #000; background: #fff; padding: 2px 6px; border-radius: 4px; }
 
-    /* 🎨 ألوان المنصات */
-    .youtube { color: #FF0000; }
-    .telegram { color: #0088cc; }
-    .x { color: #000; background: #fff; border-radius: 5px; padding: 2px 6px; }
-
-    /* 📱 تحسين التوافق مع الشاشات الصغيرة */
     @media (max-width: 700px) {
-      h1 { font-size: 2.2em; margin-top: 25px; }
-      .controllers { gap: 40px; margin-top: 50px; }
-      .controller { width: 180px; }
-      .social-links a { font-size: 1.9em; }
+      h1 { font-size: 1.8em; }
+      .controller { width: 160px; }
+      .social-links a { font-size: 1.6em; }
     }
   </style>
 </head>
@@ -132,21 +91,21 @@
   <h1>PS4IDEA PAGES</h1>
 
   <div class="controllers">
-    <a href="https://ps4idea.github.io/900/" target="_blank" aria-label="PS4 Page">
-      <img src="ps4.png" alt="PS4 Controller Image" class="controller">
+    <a href="https://ps4idea.github.io/900/" target="_blank">
+      <img src="ps4.png" alt="PS4 Controller" class="controller">
     </a>
 
-    <a href="https://ps4idea.github.io/UMTX2" target="_blank" aria-label="PS5 Page">
-      <img src="ps5.png" alt="PS5 Controller Image" class="controller">
+    <a href="https://ps4idea.github.io/UMTX2" target="_blank">
+      <img src="ps5.png" alt="PS5 Controller" class="controller">
     </a>
   </div>
 
   <footer>
     <p>Generated by : PS4IDEA</p>
     <div class="social-links">
-      <a href="https://youtube.com/@ps4idea?si=QHLNsNjzohLqL8Sg" target="_blank" class="youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://t.me/PS4IDEA2" target="_blank" class="telegram" title="Telegram"><i class="fab fa-telegram"></i></a>
-      <a href="https://x.com/ps4idea89?t=lDbxJgYeWMuA-0XjGExl_Q&s=09" target="_blank" class="x" title="X"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://youtube.com/@ps4idea?si=QHLNsNjzohLqL8Sg" class="youtube"><i class="fab fa-youtube"></i></a>
+      <a href="https://t.me/PS4IDEA2" class="telegram"><i class="fab fa-telegram"></i></a>
+      <a href="https://x.com/ps4idea89?t=lDbxJgYeWMuA-0XjGExl_Q&s=09" class="x"><i class="fab fa-x-twitter"></i></a>
     </div>
   </footer>
 
